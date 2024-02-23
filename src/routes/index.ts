@@ -1,5 +1,6 @@
 import { Router, Request, Response } from "express";
 import userRoutes from "./userRoutes";
+import authRoutes from "./authRoutes";
 
 export default (app: any): void => {
     const routes = Router();
@@ -9,6 +10,7 @@ export default (app: any): void => {
 
     app.use(
         routes,
-        userRoutes
+        userRoutes,
+        authRoutes
     )
 }
